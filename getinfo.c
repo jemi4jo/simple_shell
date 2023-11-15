@@ -41,6 +41,8 @@ void set_info(info_t *info, char **av)
 	}
 }
 
+
+int bfree(void **buffer);
 /**
  * Frees info_t struct fields
  */
@@ -66,17 +68,4 @@ void free_info(info_t *info, int all)
 			close(info->readfd);
 		_putchar(BUF_FLUSH);
 	}
-}
-
-void bfree(void **buffer)
-{
-    if (buffer)
-    {
-        int i;
-        for (i = 0; buffer[i]; ++i)
-        {
-            free(buffer[i]); /* Free each element in the buffer */
-        }
-        free(buffer); /* Free the buffer itself */
-    }
 }
