@@ -11,7 +11,7 @@ void _eputs(char *str)
 		return;
 	while (str[i] != '\0')
 	{
-		_eputchars(str[i]);
+		_eputchar(str[i]);
 		i++;
 	}
 }
@@ -19,7 +19,7 @@ void _eputs(char *str)
 /**
  * writes the character c to stderr
  */
-int _eputchars(char c)
+int _eputchar(char c)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];

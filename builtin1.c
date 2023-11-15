@@ -79,7 +79,7 @@ int _myalias(info_t *info)
 		node = info->alias;
 		while (node)
 		{
-			print_aliass(node);
+			print_alias(node);
 			node = node->next;
 		}
 		return (0);
@@ -90,7 +90,7 @@ int _myalias(info_t *info)
 		if (p)
 			set_aliass(info, info->argv[i]);
 		else
-			print_aliass(node_starts_with(info->alias, info->argv[i], '='));
+			print_alias(node_starts_with(info->alias, info->argv[i], '='));
 	}
 
 	return (0);

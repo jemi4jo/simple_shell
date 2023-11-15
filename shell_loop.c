@@ -6,9 +6,9 @@
 int hsh(info_t *info, char **av)
 {
 	ssize_t r = 0;
-	int builtin_rets = 0;
+	int builtin_ret = 0;
 
-	while (r != -1 && builtin_rets != -2)
+	while (r != -1 && builtin_ret != -2)
 	{
 		clear_info(info);
 		if (interactive(info))
@@ -18,8 +18,8 @@ int hsh(info_t *info, char **av)
 		if (r != -1)
 		{
 			set_info(info, av);
-			builtin_rets = find_builtin(info);
-			if (builtin_rets == -1)
+			builtin_ret = find_builtin(info);
+			if (builtin_ret == -1)
 				find_cmd(info);
 		}
 		else if (interactive(info))

@@ -89,7 +89,7 @@ int read_history(info_t *info)
 	info->histcount = linecount;
 	while (info->histcount-- >= HIST_MAX)
 		delete_node_at_index(&(info->history), 0);
-	renumber_histories(info);
+	renumber_history(info);
 	return (info->histcount);
 }
 
@@ -112,7 +112,7 @@ int build_history_list(info_t *info, char *buf, int linecount)
 /**
  * Renumbers the history linked list after changes
  */
-int renumber_histories(info_t *info)
+int renumber_history(info_t *info)
 {
 	list_t *node = info->history;
 	int i = 0;
