@@ -72,10 +72,11 @@ void bfree(void **buffer)
 {
     if (buffer)
     {
-        for (int i = 0; buffer[i]; ++i)
+        int i;
+        for (i = 0; buffer[i]; ++i)
         {
-            free(buffer[i]); // Free each element in the buffer
+            free(buffer[i]); /* Free each element in the buffer */
         }
-        free(buffer); // Free the buffer itself
+        free(buffer); /* Free the buffer itself */
     }
 }
