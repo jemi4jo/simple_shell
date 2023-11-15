@@ -17,7 +17,7 @@ ssize_t _getline(char **lineptr, ssize_t *n, int stream);
 int _atoi(char *s);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
-char *_strchrs(char *s, char c);
+char *_strchr(char *s, char c);
 char *my_strtok(char *str, char *delim);
 int _putchar(char c);
 void execute(char **arr, char **av);
