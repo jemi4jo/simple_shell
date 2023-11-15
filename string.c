@@ -1,9 +1,6 @@
 #include "main.h"
 /**
- * _strlen - works the same as strlen
- * @s: is a char to be tested
- *
- * Return: the sum on success
+ * works the same as strlen
  */
 int _strlen(char *s)
 {
@@ -16,10 +13,7 @@ int _strlen(char *s)
 	return (c);
 }
 /**
- * _atoi - converts string to an integar
- * @s: a pointer to a string
- *
- * Return: the number
+ * converts string to an integar
  */
 int _atoi(char *s)
 {
@@ -60,12 +54,7 @@ int _atoi(char *s)
 	}
 	return (nb * sign);
 }
-/**
- * _strcmp - works the same as strcmp
- * @s1: pointer to string 1
- * @s2: pointer to string 2
- *
- * Return: 0 if simmiler
+/**works the same as strcmp
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -82,11 +71,7 @@ int _strcmp(char *s1, char *s2)
 	return (0);
 }
 /**
- * _strchr - search for char c in string s
- * @s: pointer to a string
- * @c: a char to be searched for
- *
- * Return: pointer to s or null if c not found
+ * search for char c in string s
  */
 char *_strchr(char *s, char c)
 {

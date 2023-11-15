@@ -1,10 +1,6 @@
 #include "main.h"
 /**
- * free_grid - frees a 2d array
- * @grid: pointer to 2d array
- * @height: height of the array
- *
- * Return: nothing
+ * frees a 2d array
  */
 void free_grid(int **grid, int height)
 {
@@ -17,12 +13,7 @@ void free_grid(int **grid, int height)
 	free(grid);
 }
 /**
- * _realloc - works the same as realloc
- * @ptr: an arry of any type
- * @old_size: old size of the array
- * @new_size: new size of the array
- *
- * Return: pointer to the new array
+ * works the same as realloc
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {

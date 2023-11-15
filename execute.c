@@ -1,10 +1,6 @@
 #include "main.h"
 /**
- * execute - executes the command
- * @arr: array of arguments
- * @av: array of arguments
- *
- * Return: 1 on succ  -1 on fail
+ * executes the command
  */
 void execute(char **arr, char **av)
 {
@@ -22,12 +18,7 @@ void execute(char **arr, char **av)
 	wait(&status);
 }
 /**
- * _getline - read a line from input
- * @lineptr: a pointer to an array
- * @n: number
- * @stream: file stream
- *
- * Return: number reaeed
+ * read a line from input
  */
 ssize_t _getline(char **lineptr, ssize_t *n, int stream)
 {

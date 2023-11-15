@@ -1,9 +1,6 @@
 #include "main.h"
 /**
- * main - this is the main function of the shell
- * @ac: number of args
- * @av: args
- * Return: nothing
+ * this is the main function of the shell
  */
 int main(int ac __attribute__((unused)), char *av[])
 {

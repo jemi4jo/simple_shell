@@ -1,10 +1,7 @@
 #include "main.h"
 int n_elements(char *str);
 /**
- * make_array - makes a 2d array of a string
- * @str: an array of chars
- *
- * Return: a pointer to a 2d array
+ * makes a 2d array of a string
  */
 char **make_array(char *str)
 {
@@ -30,10 +27,7 @@ char **make_array(char *str)
 
 }
 /**
- * n_elements - return number of array to be allocated
- * @str: a string
- *
- * Return: number of elements
+ * return number of array to be allocated
  */
 int n_elements(char *str)
 {
@@ -48,11 +42,7 @@ int n_elements(char *str)
 	return (j + 1);
 }
 /**
- * my_strtok - works as strtok
- * @str: a string
- * @delim: delimter
- *
- * Return: a tokened string
+ * works as strtok
  */
 char *my_strtok(char *str, char *delim)
 {
