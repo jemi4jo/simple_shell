@@ -70,3 +70,16 @@ char *find_path(info_t *info, char *pathstr, char *cmd)
 	}
 	return (NULL);
 }
+
+void bfree(void **buffer)
+{
+    if (buffer)
+    {
+        int i;
+        for (i = 0; buffer[i]; ++i)
+        {
+            free(buffer[i]); /* Free each element in the buffer */
+        }
+        free(buffer); /* Free the buffer itself */
+    }
+}

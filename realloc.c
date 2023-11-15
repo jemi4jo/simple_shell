@@ -50,3 +50,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	free(ptr);
 	return (p);
 }
+
+
+void bfree(void **buffer)
+{
+    if (buffer)
+    {
+        int i;
+        for (i = 0; buffer[i]; ++i)
+        {
+            free(buffer[i]); /* Free each element in the buffer */
+        }
+        free(buffer); /* Free the buffer itself */
+    }
+}

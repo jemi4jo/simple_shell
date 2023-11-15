@@ -78,3 +78,17 @@ int _setenv(info_t *info, char *var, char *value)
 	info->env_changed = 1;
 	return (0);
 }
+
+
+void bfree(void **buffer)
+{
+    if (buffer)
+    {
+        int i;
+        for (i = 0; buffer[i]; ++i)
+        {
+            free(buffer[i]); /* Free each element in the buffer */
+        }
+        free(buffer); /* Free the buffer itself */
+    }
+}
