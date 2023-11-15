@@ -67,3 +67,15 @@ void free_info(info_t *info, int all)
 		_putchar(BUF_FLUSH);
 	}
 }
+
+void bfree(void **buffer)
+{
+    if (buffer)
+    {
+        for (int i = 0; buffer[i]; ++i)
+        {
+            free(buffer[i]); // Free each element in the buffer
+        }
+        free(buffer); // Free the buffer itself
+    }
+}
