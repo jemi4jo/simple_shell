@@ -41,8 +41,18 @@ void set_info(info_t *info, char **av)
 	}
 }
 
+void bfree(void **buffer)
+{
+    if (buffer)
+    {
+        for (int i = 0; buffer[i]; ++i)
+        {
+            free(buffer[i]);
+        }
+        free(buffer);
+    }
+}
 
-int bfree(void **buffer);
 /**
  * Frees info_t struct fields
  */
@@ -69,3 +79,4 @@ void free_info(info_t *info, int all)
 		_putchar(BUF_FLUSH);
 	}
 }
+
