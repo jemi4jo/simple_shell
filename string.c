@@ -1,92 +1,60 @@
-#include "main.h"
+#include "shell.h"
+
 /**
- * works the same as strlen
+ * returns the length of a string
  */
 int _strlen(char *s)
 {
-	int c = 0;
+	int i = 0;
 
-	for (; *s != '\0'; s++)
-	{
-		c++;
-	}
-	return (c);
+	if (!s)
+		return (0);
+
+	while (*s++)
+		i++;
+	return (i);
 }
+
 /**
- * converts string to an integar
- */
-int _atoi(char *s)
-{
-	int sign = 1;
-	unsigned int nb = 0;
-	signed int nb1 = 0;
-
-	for (; *s != '\0'; s++)
-	{
-		if (*s == ' ' || *s == '+' || *s == '-')
-		{
-			if ((*s == '-' && sign == 1) || (*s == '+' && sign == -1))
-			{
-				sign = -1;
-			}
-			else if (*s == '-' && sign == -1)
-			{
-				sign = 1;
-			}
-		}
-		if (*s >= '0' && *s <= '9')
-		{
-			nb = nb + (*s - '0');
-			if (*(s + 1) < '0' || *(s + 1) > '9')
-			{
-				break;
-			}
-			else
-			{
-				nb = nb * 10;
-			}
-		}
-	}
-	if (sign == -1)
-	{
-		nb1 = nb * sign;
-		return (nb1);
-	}
-	return (nb * sign);
-}
-/**works the same as strcmp
+ * performs lexicogarphic comparison of two strangs.
  */
 int _strcmp(char *s1, char *s2)
 {
-	for (; *s1 != '\0';)
+	while (*s1 && *s2)
 	{
 		if (*s1 != *s2)
-		{
 			return (*s1 - *s2);
-		}
-
 		s1++;
 		s2++;
 	}
-	return (0);
+	if (*s1 == *s2)
+		return (0);
+	else
+		return (*s1 < *s2 ? -1 : 1);
 }
-/**
- * search for char c in string s
- */
-char *_strchr(char *s, char c)
-{
-	int a;
 
-	for (a = 0; s[a]; a++)
-	{
-		if (s[a] == c)
-		{
-			return (s + a);
-		}
-	}
-	if (c == '\0')
-	{
-		return (s + a);
-	}
-	return ('\0');
+/**
+ * checks if needle starts with haystack
+ */
+char *starts_with(const char *haystack, const char *needle)
+{
+	while (*needle)
+		if (*needle++ != *haystack++)
+			return (NULL);
+	return ((char *)haystack);
+}
+
+/**
+ * concatenates two strings
+ */
+char *_strcat(char *dest, char *src)
+{
+	char *ret = dest;
+
+	while (*dest)
+		dest++;
+	while (*src)
+		*dest++ = *src++;
+	*dest = *src;
+	return (ret);
 }

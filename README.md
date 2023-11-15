@@ -1,2 +1,2 @@
-simple_shell
-Ermiyas Solomon
+Simple Shell
+All By Ermiyas Solomon
