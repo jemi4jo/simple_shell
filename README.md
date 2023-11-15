@@ -1,2 +1,2 @@
 Simple Shell
-All By Ermiyas Solomon
+By Ermiyas Solomon
